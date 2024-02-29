@@ -1,0 +1,24 @@
+This C++ code represents a simulation of a railcar sorting algorithm using three holding tracks (H1, H2, H3) and an input/output track. Here's a breakdown of its functionality:
+
+1.    Data Structures:
+        It defines a Node struct to represent each element in a linked list.
+        It implements a Queue class to manage the railcars using linked lists, with methods to enqueue, dequeue, check if the queue is empty, and peek at the front element.
+
+2.    Main Function:
+        The main() function initializes the input track (inputT), three holding tracks (H1, H2, H3), and the output track (outputT).
+        It prompts the user to input values for the input track.
+        It iterates through each element in the input track, dequeues elements, and based on their values, either moves them directly to the output track if they match a specific sequence, or places them into one of the holding tracks for later processing.
+        If a railcar cannot be directly moved to the output track, it attempts to move it between holding tracks (limited to two inter-track shuffles) to create the required sequence.
+        Finally, it outputs the sequence of railcars in the output track.
+
+3.    Railcar Sorting Algorithm:
+        The algorithm starts with the assumption that the railcars in the input track are initially in ascending order starting from 1.
+        It dequeues elements from the input track and checks if they match the expected sequence.
+        If a railcar doesn't match the expected sequence, it's placed in one of the holding tracks.
+        If a direct move to the output track isn't possible, the algorithm attempts to rearrange railcars between holding tracks to create the expected sequence.
+
+4.    Output:
+        During the process, the code outputs each movement of railcars, whether they're moved to the output track or between holding tracks.
+        If a valid arrangement cannot be achieved, the code exits with an appropriate message.
+
+Overall, the code demonstrates a strategy for sorting railcars into a specified sequence using a combination of direct movements and limited inter-track shuffling.
